@@ -5,8 +5,18 @@
 # o = m.MyClass()
 
 import requests
+url = "https://jsonplaceholder.typicode.com"
+# response = requests.get(f"{url}/posts/4/comments")
 
-response = requests.get('https://www.google.com')
+# print(response.status_code)
+# print(response.text)
 
+response = requests.post(f"{url}/posts", 
+                         json={"title": "foo", 
+                               "body": "bar", "userId": 1})
 print(response.status_code)
 print(response.text)
+
+j = response.json()
+print(type(j))
+print(j["id"])
