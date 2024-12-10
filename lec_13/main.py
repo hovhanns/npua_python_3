@@ -19,13 +19,13 @@ for thread in threads:
     thread.join()
 
 
-# if __name__ == "__main__":
-#     processes = []
+if __name__ == "__main__":
+    processes = []
 
-#     for i in range(3):
-#         process = Process(target=print_numbers, args=(f"Process-{i}",))
-#         processes.append(process)
-#         process.start()
+    for i in range(3):
+        process = Process(target=print_numbers, args=(f"Process-{i}",))
+        processes.append(process)
+        process.start()
 
-#     for process in processes:
-#         process.join()
+    for process in processes:
+        process.join()
